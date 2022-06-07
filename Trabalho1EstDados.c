@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <string.h>
 
 //funcao do bubblesort
 void bubbleSort(int *vetor, int dim){
@@ -152,17 +153,17 @@ int main(int argc, char* argv[]){
     }
 
     //mergesort
-    if(argv[3] == "-m"){
+    if(strcmp(argv[3], "-m")){
         mergeSort(vetor, 0, dim - 1);
     }
 
     //quicksort
-    if(argv[3] == "-q"){
+    if(strcmp(argv[3], "-q")){
         quickSort(vetor, 0, dim - 1);
     }
 
     //bubblesort
-    if(argv[3] == "-n"){
+    if(strcmp(argv[3], "-n")){
         bubbleSort(vetor, dim);
     }
 
